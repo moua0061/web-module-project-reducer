@@ -1,5 +1,5 @@
-import React from 'react';
-import { useReducer } from 'react';
+import React, { useReducer }  from 'react';
+import reducer, { initialState } from '../reducers';
 
 import './App.css';
 
@@ -11,13 +11,9 @@ import CalcButton from './CalcButton';
 function App() {
 
 
-  const initialState = {
-    total: 0,
-    operation: '',
-    memory: 0
-  }
+  const [ state, dispatch ] = useReducer(reducer, initialState);
 
-  const [state, dispatch] = useReducer(reducer, initialState)
+  console.log(state);
 
   return (
     <div className="App">
