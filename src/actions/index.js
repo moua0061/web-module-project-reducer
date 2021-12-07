@@ -1,3 +1,5 @@
+export const CLEAR_DISPLAY = 'CLEAR_DISPLAY';
+
 export const ADD_ONE = "ADD_ONE";
 
 export const APPLY_NUMBER = "APPLY_NUMBER";
@@ -13,4 +15,8 @@ export const applyNumber = (number) => {
 
 export const changeOperator = (operator) => {
     return({type: CHANGE_OPERATION, payload: operator});
+}
+
+export const clearDisplay = () => {
+    return({type: CLEAR_DISPLAY})
 }
