@@ -62,7 +62,7 @@ const reducer = (state, action) => {
         case (CURRENT_MEMORY):
             return({
                 ...state,
-                memory: state.memory + state.total
+                memory: calculateResult(state.total, state.memory, state.operation)
             })
         default:
             return state;
